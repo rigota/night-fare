@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ночной рейс</title>
+    <link rel="preload" href="public/assets/scene-v2-canvas.png" as="image" />
+    <link rel="preload" href="public/assets/driver-seat-sheet.png" as="image" />
+    <link rel="preload" href="public/assets/hands-rope-sheet.png" as="image" />
+    <link rel="preload" href="public/assets/hero-v2.png" as="image" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="game-frame" aria-label="Игра Ночной рейс">
+        <canvas id="game" width="960" height="540"></canvas>
+        <div class="scanlines" aria-hidden="true"></div>
+        <div id="loading" class="loading">ЗАГРУЗКА</div>
+      </section>
+      <div class="touch-controls" aria-hidden="true">
+        <button class="tc" data-act="left" type="button">◄ УКЛОН</button>
+        <button class="tc" data-act="breathe" type="button">ВДОХ</button>
+        <button class="tc" data-act="right" type="button">УКЛОН ►</button>
+      </div>
+      <section class="panel" aria-label="Статус игры">
+        <div class="brand">
+          <span>НОЧНОЙ РЕЙС</span>
+          <small>РЕТРО-ВЫЖИВАНИЕ</small>
+        </div>
+        <button id="start" type="button">ИГРАТЬ</button>
+        <button id="mute" type="button" aria-pressed="false">ЗВУК</button>
+      </section>
+    </main>
+    <script type="module" src="src/game.js"></script>
+  </body>
+</html>
